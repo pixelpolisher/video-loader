@@ -1,0 +1,58 @@
+.video {
+  position: relative;
+  width: 900px;
+
+  &__wallpaper {
+    height: 100px;
+    padding-top: 56.25%;
+    background: #000;
+  }
+
+  &__play {
+	  border: 6px solid rgba(#fff,0.6);
+	  background: rgba(#000, 0.1);
+	  box-shadow: 0 0 7px rgba(#000, 0);
+	  transform: scale(1);
+	  border-radius: 50%;
+	  width: 100px;
+	  height: 100px;
+	  display: block;
+	  cursor: pointer;
+	  transition: 0.5s;
+	  position: absolute;
+		z-index: 1;
+	  left: calc(50% - 50px);
+	  top: calc(50% - 50px);
+
+	  &::before {
+	    @include pseudo-content;
+	    border: 1px solid transparent;
+	    border-width: 24px 40px;
+	    left: calc(50% - 12px);
+	    top: calc(50% - 24px);
+	    border-left-color: rgba(#fff, 0.6);
+	    transition: 0.5s;
+	  }
+
+	  &:hover {
+      border-color: rgba(#fff, 0.9);
+      background: rgba(#000, 0.4);
+      box-shadow: 0 0 7px rgba(#000, 0.3);
+      transform: scale(1.1);
+
+      &::before { border-left-color: rgba(#fff, 0.9); }
+    }
+	}
+
+  &__error {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    width: 100%;
+  }
+}
