@@ -1,0 +1,22 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+  color: $c-text;
+	font: 90%/#{$line-height} normal;
+	font-family: $default-font;
+  min-height: 100vh;
+}
+
+img {
+	border: 0;
+	max-width: 100%;
+	height: auto;
+}

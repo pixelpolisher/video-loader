@@ -1,0 +1,9 @@
+.wrapper {
+  margin: 0 auto;
+  max-width: 980px;
+
+  @media(min-width: $mq-md) {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
